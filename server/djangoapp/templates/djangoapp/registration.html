@@ -6,6 +6,32 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
     <body>
-    <!--Add a registration form here -->
+        <div class="container mt-5">
+            <h2>Signup</h2>
+            <form action="/registration" method="POST">
+              {% csrf_token %}
+              <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+              </div>
+              <div class="form-group">
+                <label for="firstname">Firstname:</label>
+                <input type="text" class="form-control" id="firstname" name="firstname" required>
+              </div>
+              <div class="form-group">
+                <label for="lasstname">Lastname:</label>
+                <input type="text" class="form-control" id="Lastname" name="Lastname" required>
+              </div>
+              <div class="form-group">
+                <label for="password1">Password:</label>
+                <input type="password" class="form-control" id="password1" name="password1" required>
+              </div>
+              <div class="form-group">
+                <label for="password2">Confirm Password:</label>
+                <input type="password" class="form-control" id="password2" name="password2" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
     </body>
 </html>
